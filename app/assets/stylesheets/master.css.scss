@@ -1,3 +1,8 @@
+body {
+  background: url('/assets/concrete_seamless.png');
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -13,4 +18,13 @@
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+p {
+  font-size: 1.2em;
+}
+
+.navbar.navbar-inverse {
+  background: url('/assets/wild_oliva.png');
+  border-radius: 0;
+  box-shadow: 0px 1px 3px #2a2a2a;
 }
