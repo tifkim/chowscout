@@ -28,7 +28,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 #Incorporate bootstrap styling
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.3.4.1'
+
+gem 'sprockets', '<= 2.11.0'
 
 ## Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.0.6'
