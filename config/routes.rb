@@ -55,5 +55,7 @@ Chowscout::Application.routes.draw do
   #   end
 
   root 'places#index'
+  resources :places
+  # The priority is based upon order of creation: first created -> highest priority.
 
 end
