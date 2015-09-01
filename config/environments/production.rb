@@ -1,5 +1,4 @@
 Chowscout::Application.configure do
-  config.action_mailer.default_url_options = { :host => 'chowscout.herokuapp.com' }
 
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
@@ -10,7 +9,7 @@ Chowscout::Application.configure do
     :authentication => :plain,
   }
   ActionMailer::Base.delivery_method = :smtp
-  
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
