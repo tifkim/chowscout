@@ -1,24 +1,24 @@
 require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
-  test "redirection after comment created" do
-    @user = FactoryGirl.create(:user)
-    sign_in @user
+
+  test "create" do
+    user = FactoryGirl.create(:user)
+    sign_in user
     place = FactoryGirl.create(:place)
 
-    post :create, :place_id => place.id, :user => @user, :comment => {:message=>"test", :rating =>"5_stars"}
+
+    assert_difference 'Comment.count' do
+          post :create, :place_id => place.id,
+          :user => user,
+          :comment => {:message=>"test", :rating =>"5_stars"}
+    end
 
     assert_redirected_to place_path(place)
+
+    assert_equal 1, user.comments.count
+
   end
 
-  test "comment added to database" do
-    @user = FactoryGirl.create(:user)
-    sign_in @user
-    place = FactoryGirl.create(:place)
-
-    post :create, :place_id => place.id, :user => @user, :comment => {:message=>"test", :rating =>"5_stars"}
-
-    assert_redirected_to place_path(place)
-  end
 
 end
